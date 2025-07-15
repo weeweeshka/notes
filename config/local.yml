@@ -1,0 +1,5 @@
+env: "local"
+storage_path: "D:/go Projects/tuzov_micro/sso/storage/storage.sso.db"
+grpc:
+  port: 77077
+  timeout: 5s
