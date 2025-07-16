@@ -1,8 +1,9 @@
 package cmd
 
 import (
+	"github.com/weeweeshka/notes/internal/config"
 	"log/slog"
-	"notes/internal/config"
+
 	"os"
 )
 
