@@ -1,5 +1,5 @@
 env: "local"
-storage_path: "D:/go Projects/tuzov_micro/sso/storage/storage.sso.db"
+storagePath: "postgres://postgres:12345@localhost:5433/notes?sslmode=disable"
 grpc:
-  port: 77077
+  port: 5444
   timeout: 5s

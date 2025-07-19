@@ -8,17 +8,17 @@ import (
 
 type Config struct {
 	Env         string `yaml:"env" env-default:"local"`
-	StoragePath string `yaml:"storage_path" env-default:"/var/run/docker.sock"`
+	StoragePath string `yaml:"storagePath" env-default:"postgres://postgres:12345@localhost:5432/notes?sslmode=disable"`
 	GRPCServer
 }
 
 type GRPCServer struct {
-	Port    int    `yaml:"port" env-default:"77077"`
+	Port    int    `yaml:"port" env-default:"5444"`
 	Timeout string `yaml:"timeout" env-default:"5s"`
 }
 
 func MustLoad() *Config {
-	return MustLoadPath("D:/go Projects/notes_grpc/notes/config/local.yml")
+	return MustLoadPath("D:/go Projects/notes/notes/config/local.yml")
 }
 
 func MustLoadPath(configPath string) *Config {
