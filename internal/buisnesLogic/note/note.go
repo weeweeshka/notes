@@ -33,7 +33,7 @@ func New(log *slog.Logger, noteCreater NoteCreater, noteReader NoteReader, notDe
 		noteReader:  noteReader,
 		noteDeleter: notDeleter,
 	}
-}
+} // пока эта функция не создаст объект, все методы недоступны
 
 func (n *Note) CreateNote(ctx context.Context, content string) (int64, error) {
 	const op = "buisnesLogic.note.CreateNote"

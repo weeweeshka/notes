@@ -18,6 +18,7 @@ type GrpcApp struct {
 func New(port int, slog *slog.Logger, noteService grpcHandlers.Note) *GrpcApp {
 	gRPCServer := grpc.NewServer(grpc.UnaryInterceptor(middleware.SimpleTraceIDInterceptor())) // создается grpc сервер с дефолт настройками
 	grpcHandlers.RegisterServer(gRPCServer, noteService)                                       // регистрирует на этот сервер нашу реализацию, т.е инкапсулируем сюда
+	// это ключевая функция
 
 	return &GrpcApp{
 		gRPCServer,
